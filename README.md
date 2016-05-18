@@ -16,5 +16,5 @@ php composer.phar require -dev --prefer-dist sirroland/yii2-migen "*"
 or add
 
 ```
-"sirroland/yii2-migen": "~1.0"
+"sirroland/yii2-migen": "*"
 ```
