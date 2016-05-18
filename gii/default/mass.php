@@ -17,15 +17,13 @@ use sirroland\migen\db\Migration;
 
 class <?= $migrationName ?> extends Migration {
 
-    protected $_tableName = '<?= ($generator->usePrefix)?$tableData['alias']:$tableData['name'] ?>';
-
     public function safeUp() {
 
 $connection=Yii::$app-><?=$generator->db?>;
 $transaction=$connection->beginTransaction();
 try{
 <?php foreach($tableList as $tableData):?>
- $this->createTable($this->tableName,
+ $this->createTable('<?= ($generator->usePrefix)?$tableData['alias']:$tableData['name'] ?>',
         [
         <?php foreach($tableData['columns'] as $name=>$data):?>
         '<?=$name?>'=> <?=$data;?>,
