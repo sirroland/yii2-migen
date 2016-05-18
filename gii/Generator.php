@@ -24,7 +24,6 @@ class Generator extends \yii\gii\Generator{
     public $tableIgnore;
     public $genmode='single';
     public $usePrefix=true;
-    public $tableOptions='ENGINE=InnoDB';
 
     private $_ignoredTables = [];
     private $_tables = [];
@@ -61,7 +60,6 @@ class Generator extends \yii\gii\Generator{
                 [['db'], 'validateDb'],
                 [['tableName'], 'validateTableName'],
                 ['migrationPath', 'safe'],
-                ['tableOptions', 'safe'],
                 [['usePrefix'], 'boolean'],
                 [['genmode'],'in','range'=>['single','mass']],
             ]);
@@ -78,7 +76,6 @@ class Generator extends \yii\gii\Generator{
                 'migrationPath' => 'Migration Path',
                 'usePrefix'=>'Replace table prefix',
                 'genmode'=>'Generation Mode',
-                'tableOptions'=>'Table Options'
             ]);
     }
 
@@ -94,7 +91,6 @@ class Generator extends \yii\gii\Generator{
                 'migrationPath' => 'Path for save migration file',
                 'usePrefix'=>'Use Table Prefix Replacer eg.{{%tablename}} instead of prefix_tablename',
                 'genmode'=>'All tables in separated files, or all in one file',
-                'tableOptions'=>'Table Options'
             ]);
     }
 
@@ -128,7 +124,7 @@ class Generator extends \yii\gii\Generator{
      */
     public function stickyAttributes()
     {
-        return array_merge(parent::stickyAttributes(), ['db','migrationPath','usePrefix','tableOptions','tableIgnore']);
+        return array_merge(parent::stickyAttributes(), ['db','migrationPath','usePrefix','tableIgnore']);
     }
     public function getIgnoredTables()
     {
