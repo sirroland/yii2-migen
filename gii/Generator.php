@@ -19,7 +19,7 @@ class Generator extends \yii\gii\Generator{
 
 
     public $db = 'db';
-    public $migrationPath = '@common/migrations';
+    public $migrationPath = '@console/migrations';
     public $tableName;
     public $tableIgnore;
     public $genmode='single';
