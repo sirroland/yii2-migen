@@ -13,7 +13,6 @@
 echo "<?php\n";
 ?>
 
-use yii\db\Schema;
 use sirroland\migen\db\Migration;
 
 class <?= $migrationName ?> extends Migration {
