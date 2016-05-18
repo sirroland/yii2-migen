@@ -17,7 +17,7 @@ echo "<?php\n";
 ?>
 
 use yii\db\Schema;
-use insolita\migrik\db\Migration;
+use sirroland\migen\db\Migration;
 
 class <?= $migrationName ?> extends Migration {
     protected $_tableName = '<?= ($generator->usePrefix)?$tableAlias:$tableName ?>';
