@@ -15,8 +15,8 @@ class Bootstrap implements BootstrapInterface
     public function bootstrap($app)
     {
         if ($app->hasModule('gii')) {
-            if (!isset($app->getModule('gii')->generators['migrik'])) {
-                $app->getModule('gii')->generators['migrik'] = 'sirroland\migen\gii\Generator';
+            if (!isset($app->getModule('gii')->generators['migen'])) {
+                $app->getModule('gii')->generators['migen'] = 'sirroland\migen\gii\Generator';
             }
         }
     }
