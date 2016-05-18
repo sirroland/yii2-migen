@@ -241,10 +241,10 @@ class Generator extends \yii\gii\Generator{
                     $coldata .= '->boolean()';
                     break;
                 case 'datetime':
-                    $coldata .= '->boolean()';
+                    $coldata .= '->dateTime()';
                     break;
                 case 'date':
-                    $coldata .= '->boolean()';
+                    $coldata .= '->date()';
                     break;
                 case 'timestamp':
                     $coldata .= '->timestamp()';
