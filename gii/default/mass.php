@@ -17,7 +17,7 @@ use sirroland\migen\db\Migration;
 
 class <?= $migrationName ?> extends Migration {
 
-    protected $_tableName = '<?= ($generator->usePrefix)?$tableAlias:$tableName ?>';
+    protected $_tableName = '<?= ($generator->usePrefix)?$tableData['alias']:$tableData['name'] ?>';
 
     public function safeUp() {
 
